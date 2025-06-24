@@ -65,7 +65,8 @@ void loop(void) {
       x += width;						// add the pixel width of the scrolling text
     } while( x < u8g2.getDisplayWidth() );		// draw again until the complete display is filled
     
-    u8g2.setFont(u8g2_font_inb12_mr);		// draw the current pixel width
+    u8g2.setFont(u8g2_font_helvR18_tf);		// draw the current pixel width
+    //REF with sizes: https://docs.rs/u8g2-fonts/latest/u8g2_fonts/fonts/index.html
     u8g2.setCursor(0, 58);
     //u8g2.print(width);					// this value must be lesser than 128 unless U8G2_16BIT is set
     //u8g2.print("temp");
