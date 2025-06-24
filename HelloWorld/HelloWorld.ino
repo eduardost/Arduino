@@ -1,3 +1,5 @@
+#include <SH1106.h>
+
 /*
 
   HelloWorld.ino

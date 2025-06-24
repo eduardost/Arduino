@@ -22,8 +22,8 @@ void setup() {
     while (1) delay(10);
   } else {
     Serial.println("AHT10/AHT25 sensor detected successfully.");
-  }
-}*/
+  }*/
+}
 
 void loop() {
   /*sensors_event_t humidity, temp;
@@ -41,13 +41,13 @@ void loop() {
   u8g2.setCursor(0, 20);
   u8g2.print("Temp: ");
   //u8g2.print(temp.temperature, 1);
-  u8g2.print("20", 1);
+  u8g2.print(20, 1);
   u8g2.print(" C");
 
   u8g2.setCursor(0, 40);
   u8g2.print("Humidity: ");
   //u8g2.print(humidity.relative_humidity, 1);
-  u8g2.print("65", 1);
+  u8g2.print(65, 1);
   u8g2.print(" %");
 
   u8g2.sendBuffer();
