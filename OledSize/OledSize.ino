@@ -46,9 +46,9 @@ void loop()
     display.clearDisplay();
     display.setTextSize(2);
     display.setTextColor(SH110X_WHITE);
-    display.setCursor(29,0);
+    display.setCursor(20,0);
     display.println("CONTADOR");
-    display.setTextSize(4);
+    display.setTextSize(5);
     display.setTextColor(SH110X_WHITE);
     display.setCursor(55,20);
     display.println(i);
