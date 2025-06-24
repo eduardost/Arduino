@@ -72,7 +72,7 @@ U8G2_SH1106_128X64_NONAME_1_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 
 u8g2_uint_t offset;			// current offset for the scrolling text
 u8g2_uint_t width;			// pixel width of the scrolling text (must be lesser than 128 unless U8G2_16BIT is defined
-const char *text = "U8g2 ";	// scroll this text from right to left
+const char *text = "go/BAIoT ";	// scroll this text from right to left
 
 
 void setup(void) {
@@ -111,7 +111,7 @@ void loop(void) {
     u8g2.setFont(u8g2_font_inb30_mr);		// set the target font
     do {								// repeated drawing of the scrolling text...
       u8g2.drawUTF8(x, 30, text);			// draw the scolling text
-      x += width;						// add the pixel width of the scrolling text
+      //x += width;						// add the pixel width of the scrolling text
     } while( x < u8g2.getDisplayWidth() );		// draw again until the complete display is filled
     
     u8g2.setFont(u8g2_font_inb16_mr);		// draw the current pixel width
