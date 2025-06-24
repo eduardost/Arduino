@@ -19,7 +19,8 @@ Adafruit_SH1106G display = Adafruit_SH1106G(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, 
 
 void setup()
 {
-  display.begin(SH1106_SWITCHAPVCC, 0x3C);  //initialize with the I2C addr 0x3C (for the 128x64)
+  //display.begin(SH1106_SWITCHAPVCC, 0x3C);  //initialize with the I2C addr 0x3C (for the 128x64)
+  display.begin(i2c_Address, true); // Address 0x3C default
   display.clearDisplay();
   display.display();
   delay(2000);
@@ -30,7 +31,7 @@ void setup()
   display.setTextColor(SH110X_BLACK, SH110X_WHITE);   //'inverted' text
   display.println("HOLA MUNDO");
   display.setTextSize(2);
-  display.setColor(SH110X_WHITE);
+  display.setTextColor(SH110X_WHITE);
   display.println("EDITRONIKX");
   display.setTextSize(2);
   display.setTextColor(SH110X_BLACK, SH110X_WHITE);   //'inverted' text
