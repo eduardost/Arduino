@@ -73,7 +73,7 @@ void loop(void) {
     u8g2.print(" ");
     u8g2.print(temp.temperature, 1);
     u8g2.print(" C");
-    u8g2.print("   ");
+    u8g2.print("  ");
     u8g2.print(humidity.relative_humidity, 1);
     u8g2.print(" %");
     
