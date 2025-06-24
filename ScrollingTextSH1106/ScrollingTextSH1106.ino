@@ -111,12 +111,13 @@ void loop(void) {
     u8g2.setFont(u8g2_font_inb30_mr);		// set the target font
     do {								// repeated drawing of the scrolling text...
       u8g2.drawUTF8(x, 30, text);			// draw the scolling text
-      //x += width;						// add the pixel width of the scrolling text
+      x += width;						// add the pixel width of the scrolling text
     } while( x < u8g2.getDisplayWidth() );		// draw again until the complete display is filled
     
     u8g2.setFont(u8g2_font_inb16_mr);		// draw the current pixel width
     u8g2.setCursor(0, 58);
-    u8g2.print(width);					// this value must be lesser than 128 unless U8G2_16BIT is set
+    //u8g2.print(width);					// this value must be lesser than 128 unless U8G2_16BIT is set
+    u8g2.print("temp");
     
   } while ( u8g2.nextPage() );
   
