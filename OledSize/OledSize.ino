@@ -42,7 +42,7 @@ void setup()
 
 void loop()
 {
-  for (int i=0;i<11<i++){
+  for (int i=0;i<11;i++){
     display.clearDisplay();
     display.setTextSize(2);
     display.setTextColor(SH110X_WHITE);
