@@ -65,15 +65,15 @@ void loop(void) {
       x += width;						// add the pixel width of the scrolling text
     } while( x < u8g2.getDisplayWidth() );		// draw again until the complete display is filled
     
-    u8g2.setFont(u8g2_font_inb16_mr);		// draw the current pixel width
+    u8g2.setFont(u8g2_font_inb12_mr);		// draw the current pixel width
     u8g2.setCursor(0, 58);
     //u8g2.print(width);					// this value must be lesser than 128 unless U8G2_16BIT is set
     //u8g2.print("temp");
     u8g2.print(temp.temperature, 1);
-    u8g2.print(" C");
+    u8g2.print("C");
     u8g2.print(" ");
     u8g2.print(humidity.relative_humidity, 1);
-    u8g2.print(" %");
+    u8g2.print("%");
     
   } while ( u8g2.nextPage() );
   
