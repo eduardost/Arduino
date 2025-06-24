@@ -70,6 +70,10 @@ void loop(void) {
     //u8g2.print(width);					// this value must be lesser than 128 unless U8G2_16BIT is set
     //u8g2.print("temp");
     u8g2.print(temp.temperature, 1);
+    u8g2.print(" C");
+    u8g2.print(" ");
+    u8g2.print(humidity.relative_humidity, 1);
+    u8g2.print(" %");
     
   } while ( u8g2.nextPage() );
   
