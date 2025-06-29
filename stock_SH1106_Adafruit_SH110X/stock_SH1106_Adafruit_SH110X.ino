@@ -131,6 +131,9 @@ void setup() {
 }
 
 void loop() {
+  readPrice(0, 0, "JPM");
+  delay(3000);
+  display.clearDisplay();
   readPrice(0, 0, "AAPL");
   delay(3000);
   display.clearDisplay();
